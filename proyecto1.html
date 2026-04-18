@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto 1: Análisis de Ventas</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f7fa;
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 2rem; }
+        a.back { color: #2e75b6; text-decoration: none; font-weight: 600; }
+        a.back:hover { text-decoration: underline; }
+        h1 { color: #1f4e78; font-size: 2.5rem; margin: 2rem 0 1rem; }
+        h2 { color: #1f4e78; font-size: 2rem; margin: 2rem 0 1rem; border-bottom: 2px solid #2e75b6; padding-bottom: 0.5rem; }
+        h3 { color: #2e75b6; font-size: 1.3rem; margin: 1.5rem 0 0.8rem; }
+        section {
+            background: #fff;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        ul { margin-left: 2rem; margin-bottom: 1rem; }
+        li { margin-bottom: 0.5rem; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        th {
+            background: #1f4e78;
+            color: #fff;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+        td {
+            padding: 0.8rem 1rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        tr:nth-child(even) { background: #f5f7fa; }
+        .metric {
+            background: linear-gradient(135deg, #1f4e78, #2e75b6);
+            color: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            margin: 1rem;
+            display: inline-block;
+            min-width: 200px;
+        }
+        .metric-value { font-size: 2rem; font-weight: 700; }
+        .metric-label { font-size: 0.9rem; opacity: 0.95; }
+        .highlight {
+            background: #e7f0f7;
+            border-left: 4px solid #2e75b6;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 5px;
+        }
+        footer {
+            background: #1f4e78;
+            color: #fff;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p><a href="index.html" class="back">← Volver al portafolio</a></p>
+
+        <h1>Proyecto 1: Análisis de Datos de Ventas Q4 2024</h1>
+
+        <section>
+            <h2>📊 Resumen Ejecutivo</h2>
+            <p>Análisis completo de 2,255 transacciones de ventas Q4 2024, desde limpieza de datos hasta identificación de patrones clave de negocio.</p>
+            
+            <div style="text-align: center;">
+                <div class="metric">
+                    <div class="metric-value">$2.87M</div>
+                    <div class="metric-label">Ventas Totales</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">2,255</div>
+                    <div class="metric-label">Transacciones</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">$3,893</div>
+                    <div class="metric-label">Ticket Promedio</div>
+                </div>
+            </div>
+
+            <h3>Hallazgos Principales</h3>
+            <ul>
+                <li><strong>Producto más vendido:</strong> Tablet (Standard)</li>
+                <li><strong>Ciudad líder:</strong> Monterrey (401 ventas)</li>
+                <li><strong>Mes mejor:</strong> Noviembre</li>
+                <li><strong>Precio promedio por categoría:</strong> Auriculares $1,235 | Laptops $1,308 | Tablets $1,262 | Teléfonos $1,239</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>🎯 Contexto y Objetivo</h2>
+            <h3>Problema</h3>
+            <p>Se recibió dataset de 2,255 registros con múltiples problemas de calidad: duplicaciones, fórmulas rotas, datos inconsistentes.</p>
+            
+            <h3>Objetivo</h3>
+            <p>Crear dataset limpio y confiable que permitiera:</p>
+            <ul>
+                <li>Entender desempeño de ventas</li>
+                <li>Identificar productos y regiones líderes</li>
+                <li>Calcular métricas clave</li>
+                <li>Establecer base para reportes futuros</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>🔧 Metodología</h2>
+            <h3>Fase 1: Auditoría</h3>
+            <p>Revisión inicial, identificación de 2,255 registros con 17 columnas, detección de problemas.</p>
+
+            <h3>Fase 2: Limpieza</h3>
+            <p>Eliminación de duplicaciones, resolución de fórmulas rotas, normalización de datos con TRIM() y PROPER().</p>
+
+            <h3>Fase 3: Análisis</h3>
+            <p>Cálculo de métricas, tablas dinámicas, visualizaciones de resultados.</p>
+        </section>
+
+        <section>
+            <h2>📈 Análisis Detallado</h2>
+            <h3>Desempeño por Producto</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Categoría</th>
+                        <th>Precio Promedio</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Auriculares</strong></td>
+                        <td>$1,235.95</td>
+                        <td>Audio: Bluetooth, cable, inalámbricos</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Laptops</strong></td>
+                        <td>$1,308.64</td>
+                        <td>Computadoras portátiles variadas</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tablets</strong></td>
+                        <td>$1,262.25</td>
+                        <td>Producto más vendido</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Teléfonos</strong></td>
+                        <td>$1,239.15</td>
+                        <td>Smartphones variados</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Análisis Geográfico</h3>
+            <p><strong>Monterrey:</strong> 401 ventas (18% del total) - ciudad líder</p>
+            <p><strong>Bogotá y CDMX:</strong> Segundo y tercer lugar</p>
+            <p><strong>Otros:</strong> Cobertura nacional diversa</p>
+
+            <h3>Análisis Temporal</h3>
+            <p><strong>Noviembre</strong> fue el mejor mes del trimestre, sugeriendo factores estacionales (previo a Black Friday).</p>
+        </section>
+
+        <section>
+            <h2>💡 Conclusiones y Recomendaciones</h2>
+            
+            <h3>Conclusiones</h3>
+            <ul>
+                <li>La limpieza permitió obtener dataset 100% confiable</li>
+                <li>Tablets dominan en volumen a pesar de precios similares</li>
+                <li>Concentración geográfica en Monterrey (18% de ventas)</li>
+                <li>Patrón estacional claro en Noviembre</li>
+            </ul>
+
+            <h3>Recomendaciones</h3>
+            <ul>
+                <li><strong>Estacional:</strong> Replicar estrategia de Noviembre en otros meses</li>
+                <li><strong>Geografía:</strong> Inversión en mercadeo en ciudades de menor penetración</li>
+                <li><strong>Inventario:</strong> Garantizar stock de Tablets dado alto volumen</li>
+                <li><strong>Reporting:</strong> Implementar reportes mensuales continuos</li>
+            </ul>
+
+            <div class="highlight">
+                <strong>📌 Aprendizaje Clave:</strong> La calidad de datos es fundamental. Invertir tiempo en limpieza desde el inicio evita problemas graves en análisis posteriores.
+            </div>
+        </section>
+
+        <section>
+            <h2>🎓 Habilidades Demostradas</h2>
+            <ul>
+                <li>Limpieza y normalización de datos</li>
+                <li>Análisis exploratorio</li>
+                <li>Cálculo de métricas clave</li>
+                <li>Visualización de resultados</li>
+                <li>Documentación clara y profesional</li>
+                <li>Comunicación ejecutiva</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Análisis de Datos de Ventas Q4 2024</p>
+    </footer>
+</body>
+</html>
