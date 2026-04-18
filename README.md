@@ -14,6 +14,6 @@ Combinar:
 Para generar insights que impulsen decisiones de negocio.
 
 
-[Ver proyecto completo →](https://juan-perez.github.io/proyecto1.html)
+[Ver proyecto completo →](https://nabile94.github.io/Nabileportafolio.github.io/)
 
 
