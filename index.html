@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio Data Analytics</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f7fa;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        header {
+            background: #fff;
+            border-bottom: 2px solid #1f4e78;
+            padding: 2rem 0;
+            position: sticky;
+            top: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1f4e78;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+        .nav-links a:hover { color: #2e75b6; }
+        .hero {
+            padding: 5rem 0;
+            text-align: center;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e7f0f7 100%);
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            color: #1f4e78;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        .btn {
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            display: inline-block;
+            margin: 0 0.5rem;
+            background: #1f4e78;
+            color: #fff;
+        }
+        .btn:hover { background: #2e75b6; }
+        section {
+            padding: 3rem 0;
+            background: #fff;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+        h2 { color: #1f4e78; font-size: 2rem; margin-bottom: 1.5rem; text-align: center; }
+        h3 { color: #2e75b6; font-size: 1.3rem; margin: 1rem 0; }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .project-card {
+            background: #fff;
+            border-left: 4px solid #2e75b6;
+            padding: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .project-card h3 { margin-top: 0; }
+        .project-card a {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.6rem 1.5rem;
+            background: #2e75b6;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+        .project-card a:hover { background: #1f4e78; }
+        .contact-info {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .contact-item {
+            background: #f5f7fa;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+        }
+        footer {
+            background: #1f4e78;
+            color: #fff;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+            nav { flex-direction: column; gap: 1rem; }
+            .nav-links { flex-direction: column; gap: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">📊 Mi Portafolio</div>
+                <ul class="nav-links">
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Data Analytics & Product Design</h1>
+            <p>Transformando datos en decisiones de negocio</p>
+            <a href="#proyectos" class="btn">Ver Proyectos</a>
+        </div>
+    </section>
+
+    <section id="proyectos">
+        <div class="container">
+            <h2>Mis Proyectos</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>📊 Análisis de Ventas Q4 2024</h3>
+                    <p><strong>Tecnología:</strong> Excel, Análisis Exploratorio</p>
+                    <p><strong>Logros:</strong></p>
+                    <ul style="margin-left: 1.5rem;">
+                        <li>2,255 transacciones analizadas</li>
+                        <li>Ventas totales: $2.87M</li>
+                        <li>Producto top: Tablets</li>
+                        <li>Mejor mes: Noviembre</li>
+                    </ul>
+                    <a href="proyecto1.html">Ver Detalles →</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>💰 Análisis Financiero Global</h3>
+                    <p><strong>Tecnología:</strong> SQL, Análisis Financiero</p>
+                    <p><strong>Logros:</strong></p>
+                    <ul style="margin-left: 1.5rem;">
+                        <li>6 países analizados</li>
+                        <li>USA: $3.35M (ROI: 75.75%)</li>
+                        <li>Análisis de márgenes</li>
+                        <li>Recomendaciones estratégicas</li>
+                    </ul>
+                    <a href="proyecto2.html">Ver Detalles →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <div class="container">
+            <h2>Contacto</h2>
+            <div class="contact-info">
+                <p>Estoy interesado en oportunidades de Data Analytics</p>
+                <div class="contact-item">
+                    <strong>📧 Email:</strong> <a href="mailto:tumail@example.com" style="color: #2e75b6;">tumail@example.com</a>
+                </div>
+                <div class="contact-item">
+                    <strong>🐙 GitHub:</strong> <a href="https://github.com/tuusuario" style="color: #2e75b6;" target="_blank">github.com/tuusuario</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Mi Portafolio de Data Analytics</p>
+    </footer>
+</body>
+</html>
